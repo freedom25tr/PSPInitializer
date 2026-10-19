@@ -14,7 +14,7 @@ def pspchoose123():
     global file123, psp
     file123=filedialog.askdirectory()
     if isinstance(file123, str) and len(file123) > 0:
-        psp = pathpsp(file123) / "PSP"
+        psp=pathpsp(file123) / "PSP"
         psp.mkdir(exist_ok=True)
         fileslop=["GAME", "SAVEDATA", "PHOTO", "MUSIC", "VIDEO" , "SEPLUGINS" , "ISO" , "THEME"]
         for file in fileslop:
@@ -23,10 +23,10 @@ def pspchoose123():
     else:
         sts123.config(text="Cancelled.") #hi to whoever reading this
 
-button = guipsp.Button(window, text="Choose Memory Stick", command=pspchoose123)
+button=guipsp.Button(window, text="Choose Memory Stick", command=pspchoose123)
 button.pack(pady=10)
 
-ragequit = guipsp.Button(window,text="Quit" , command=window.destroy)
+ragequit=guipsp.Button(window,text="Quit" , command=window.destroy)
 ragequit.pack()
 
 window.mainloop()
