@@ -3,14 +3,14 @@ from tkinter import filedialog
 from pathlib import Path as pathpsp
 
 window = guipsp.Tk() #tuff
-title123="PSP Memory Stick Initializer"
-window.title(title123)
+başlık="PSP Memory Stick Initializer"
+window.title(başlık)
 window.geometry("300x150")
 
 sts123=guipsp.Label(window, text="Ready-Choose your MiniSD/Memory Stick")
 sts123.pack(pady=10)
 
-def pspchoose123():
+def ne_yazıcagimi_bilemedim():
     file123=filedialog.askdirectory()
     if isinstance(file123, str) and len(file123) > 0:
         psp=pathpsp(file123) / "PSP"
@@ -22,7 +22,7 @@ def pspchoose123():
     else:
         sts123.config(text="Cancelled.") #hi to whoever reading this
 
-button=guipsp.Button(window, text="Choose Memory Stick", command=pspchoose123)
+button=guipsp.Button(window, text="Choose Memory Stick", command=ne_yazıcagimi_bilemedim)
 button.pack(pady=10)
 
 ragequit=guipsp.Button(window,text="Quit" , command=window.destroy)
