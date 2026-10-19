@@ -11,7 +11,6 @@ sts123=guipsp.Label(window, text="Ready-Choose your MiniSD/Memory Stick")
 sts123.pack(pady=10)
 
 def pspchoose123():
-    global file123, psp
     file123=filedialog.askdirectory()
     if isinstance(file123, str) and len(file123) > 0:
         psp=pathpsp(file123) / "PSP"
