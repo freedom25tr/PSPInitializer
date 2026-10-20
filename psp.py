@@ -1,7 +1,7 @@
 import tkinter as guipsp
 from tkinter import filedialog
 from pathlib import Path as pathpsp
-
+#merhaba muharrem hocam
 window = guipsp.Tk() #tuff
 başlık="PSP Memory Stick Initializer"
 window.title(başlık)
